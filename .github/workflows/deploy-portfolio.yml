@@ -1,0 +1,44 @@
+name: Deploy portfolio
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'site-parts/**'
+      - '.github/workflows/deploy-portfolio.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - name: Assemble site
+        run: |
+          cat site-parts/site-bundle.part-* > /tmp/site-bundle.zip
+          echo 'f6b1d6cf3324cdbd3f9c0b027ec2248143ac8632aa470adef09060ef33a3561d  /tmp/site-bundle.zip' | sha256sum -c -
+          mkdir -p site
+          unzip -q /tmp/site-bundle.zip -d site
+          test -f site/index.html
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
