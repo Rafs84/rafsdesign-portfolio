@@ -40,8 +40,8 @@ h1, h2, h3 { letter-spacing: -.02em; }
 
 .hero-portrait {
   display: block;
-  width: 112px;
-  height: 140px;
+  width: 150px;
+  height: 200px;
   margin: 0 auto;
   border-radius: 999px;
   object-fit: cover;
