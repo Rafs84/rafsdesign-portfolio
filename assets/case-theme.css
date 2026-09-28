@@ -1,0 +1,70 @@
+:root {
+  --color-background: #FFFFFF;
+  --color-text-primary: #111111;
+  --color-text-secondary: #4B4B4B;
+  --color-dark: #111111;
+  --color-surface: #FFFFFF;
+  --color-border: #D9D9D9;
+  color: var(--color-text-primary);
+  background: var(--color-background);
+  font-kerning: normal;
+}
+
+body { color: var(--color-text-primary); background: var(--color-background); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--color-text-primary); outline-offset: 4px; }
+h1, h2, h3 { letter-spacing: -.015em; }
+.brand { letter-spacing: -.035em; }
+.top {
+  background: var(--color-background);
+  backdrop-filter: none;
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: none;
+}
+.nav a { color: var(--color-text-primary); }
+.nav .nav-cta { background: var(--color-dark); color: var(--color-background); }
+.nav .nav-cta:hover { background: var(--color-text-secondary); color: var(--color-background); }
+.back-to-top { background: var(--color-dark); color: var(--color-background); box-shadow: none; }
+.back-to-top:hover { background: var(--color-text-secondary); }
+
+.case-hero {
+  background: var(--color-background);
+  border-bottom: 1px solid var(--color-border);
+}
+.back-link { color: var(--color-text-primary); }
+.back-link:hover, .case-next a:hover, .footer a:hover { text-decoration: underline; text-underline-offset: 5px; }
+.case-hero h1 {
+  color: var(--color-text-primary);
+  font-weight: 800;
+  letter-spacing: -.025em;
+  overflow-wrap: anywhere;
+}
+.case-lead, .case-section p, .case-sidebar, .footer, .all-card p { color: var(--color-text-secondary); }
+.case-facts { border-color: var(--color-border); }
+.case-fact small { color: var(--color-text-secondary); }
+.case-fact span, .case-section h2, .case-next a { color: var(--color-text-primary); }
+.case-section h2 { font-weight: 760; }
+.case-cover { background: var(--color-background); border-radius: 8px; }
+.case-gallery figure { background: var(--color-background); border: 1px solid var(--color-border); border-radius: 8px; }
+.case-gallery button:hover { background: var(--color-background); }
+.case-gallery button:focus-visible { outline-offset: -4px; }
+.case-next, .footer { border-color: var(--color-border); }
+.case-external .btn, .btn {
+  background: var(--color-dark);
+  border-color: var(--color-dark);
+  color: var(--color-background);
+  box-shadow: none;
+}
+.case-external .btn:hover, .btn:hover { background: var(--color-text-secondary); border-color: var(--color-text-secondary); box-shadow: none; }
+.case-external .btn.light, .btn.light { background: var(--color-background); border-color: var(--color-border); color: var(--color-text-primary); }
+.case-external .btn.light:hover, .btn.light:hover { background: var(--color-background); border-color: var(--color-text-primary); box-shadow: none; }
+
+.lightbox { background: var(--color-dark); color: var(--color-background); box-shadow: none; }
+.lightbox::backdrop { background: rgba(17, 17, 17, .85); }
+.lightbox-count { color: var(--color-background); }
+.lightbox-close, .lightbox-arrow { border-color: rgba(255, 255, 255, .55); background: transparent; color: var(--color-background); }
+.lightbox-close:hover, .lightbox-arrow:hover { background: rgba(255, 255, 255, .18); }
+.lightbox-close:focus-visible, .lightbox-arrow:focus-visible { outline-color: var(--color-background); }
+
+@media (max-width: 600px) {
+  .case-hero h1 { font-size: clamp(2.8rem, 12vw, 4rem); }
+}
