@@ -119,6 +119,9 @@ section.block { padding: 100px 0; }
 .project-image { display: block; border-radius: 25px; overflow: hidden; background: var(--color-surface); aspect-ratio: 4/3; transition: transform .2s; }
 .project-image:hover { transform: translateY(-4px); }
 .project-image img { width: 100%; height: 100%; object-fit: cover; }
+@media (min-width: 781px) and (prefers-reduced-motion: no-preference) {
+  .hero-portrait, .project-image img { will-change: transform; }
+}
 .project-meta { font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--color-text-secondary); font-weight: 700; margin-top: 23px; }
 .project h3 { font-size: clamp(1.6rem, 2.3vw, 2.2rem); line-height: 1.2; margin: 9px 0 11px; font-weight: 740; }
 .project p { color: var(--color-text-secondary); font-size: .98rem; }
@@ -219,5 +222,42 @@ section.block { padding: 100px 0; }
   </main>
   <footer class="footer"><div class="container"><span>RafsDesign © 2026</span><a href="https://www.rafsdesign.com/" target="_blank" rel="noopener noreferrer">rafsdesign.com ↗</a></div></footer>
 <a class="back-to-top" href="#top" aria-label="Back to top">↑</a>
+<script>
+(() => {
+  const motion = window.matchMedia('(min-width: 781px) and (prefers-reduced-motion: no-preference)');
+  const portrait = document.querySelector('.hero-portrait');
+  const images = [...document.querySelectorAll('.project-image img')];
+  let queued = false;
+
+  function update() {
+    queued = false;
+    if (!motion.matches) {
+      portrait.style.transform = '';
+      images.forEach(image => { image.style.transform = ''; });
+      return;
+    }
+
+    portrait.style.transform = `translate3d(0, ${Math.min(window.scrollY * 0.1, 42).toFixed(1)}px, 0)`;
+    images.forEach(image => {
+      const rect = image.getBoundingClientRect();
+      if (rect.bottom < 0 || rect.top > window.innerHeight) return;
+      const distance = (rect.top + rect.height / 2 - window.innerHeight / 2) / (window.innerHeight / 2);
+      const shift = Math.max(-18, Math.min(18, distance * -12));
+      image.style.transform = `translate3d(0, ${shift.toFixed(1)}px, 0) scale(1.12)`;
+    });
+  }
+
+  function schedule() {
+    if (queued) return;
+    queued = true;
+    requestAnimationFrame(update);
+  }
+
+  window.addEventListener('scroll', schedule, { passive: true });
+  window.addEventListener('resize', schedule);
+  motion.addEventListener('change', schedule);
+  schedule();
+})();
+</script>
 </body>
 </html>
