@@ -237,13 +237,13 @@ section.block { padding: 100px 0; }
       return;
     }
 
-    portrait.style.transform = `translate3d(0, ${Math.min(window.scrollY * 0.1, 42).toFixed(1)}px, 0)`;
+    portrait.style.transform = `translate3d(0, ${Math.min(window.scrollY * 0.15, 45).toFixed(1)}px, 0)`;
     images.forEach(image => {
-      const rect = image.getBoundingClientRect();
-      if (rect.bottom < 0 || rect.top > window.innerHeight) return;
+      const rect = image.parentElement.getBoundingClientRect();
       const distance = (rect.top + rect.height / 2 - window.innerHeight / 2) / (window.innerHeight / 2);
-      const shift = Math.max(-18, Math.min(18, distance * -12));
-      image.style.transform = `translate3d(0, ${shift.toFixed(1)}px, 0) scale(1.12)`;
+      const maxShift = Math.min(34, rect.height * 0.1);
+      const shift = Math.max(-maxShift, Math.min(maxShift, distance * -32));
+      image.style.transform = `translate3d(0, ${shift.toFixed(1)}px, 0) scale(1.22)`;
     });
   }
 
