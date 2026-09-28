@@ -9,6 +9,7 @@ on:
       - 'projects/index.html'
       - 'assets/case-theme.css'
       - 'assets/rafs-logo.svg'
+      - 'assets/raf-portrait.png'
       - 'assets/typography.css'
       - '.github/workflows/deploy-portfolio.yml'
   workflow_dispatch:
@@ -38,6 +39,7 @@ jobs:
           cp projects/index.html site/projects/index.html
           cp assets/case-theme.css site/assets/case-theme.css
           cp assets/rafs-logo.svg site/assets/rafs-logo.svg
+          cp assets/raf-portrait.png site/assets/raf-portrait.png
           cp assets/typography.css site/assets/typography.css
           sed -i 's@>RAFS</a>@><img src="assets/rafs-logo.svg" alt="" width="74" height="23"></a>@' site/index.html
           sed -i 's@</head>@<link rel="stylesheet" href="assets/typography.css"></head>@' site/index.html
