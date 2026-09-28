@@ -8,6 +8,7 @@ on:
       - 'index.html'
       - 'projects/index.html'
       - 'assets/case-theme.css'
+      - 'assets/rafs-logo.svg'
       - '.github/workflows/deploy-portfolio.yml'
   workflow_dispatch:
 
@@ -35,8 +36,11 @@ jobs:
           cp index.html site/index.html
           cp projects/index.html site/projects/index.html
           cp assets/case-theme.css site/assets/case-theme.css
+          cp assets/rafs-logo.svg site/assets/rafs-logo.svg
+          sed -i 's@>RAFS</a>@><img src="assets/rafs-logo.svg" alt="" width="74" height="23"></a>@' site/index.html
           for page in site/projects/*.html; do
             sed -i 's@../rafaela-product-design-portfolio.html@../index.html@g' "$page"
+            sed -i 's@>RAFS</a>@><img src="../assets/rafs-logo.svg" alt="" width="74" height="23"></a>@' "$page"
             if [ "$(basename "$page")" != "index.html" ]; then
               sed -i 's@</head>@<link rel="stylesheet" href="../assets/case-theme.css"></head>@' "$page"
             fi
