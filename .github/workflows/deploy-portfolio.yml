@@ -6,6 +6,7 @@ on:
     paths:
       - 'site-parts/**'
       - 'index.html'
+      - 'projects/index.html'
       - '.github/workflows/deploy-portfolio.yml'
   workflow_dispatch:
 
@@ -31,6 +32,7 @@ jobs:
           mkdir -p site
           unzip -q /tmp/site-bundle.zip -d site
           cp index.html site/index.html
+          cp projects/index.html site/projects/index.html
           test -f site/index.html
       - uses: actions/upload-pages-artifact@v4
         with:
