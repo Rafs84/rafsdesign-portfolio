@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'site-parts/**'
+      - 'index.html'
       - '.github/workflows/deploy-portfolio.yml'
   workflow_dispatch:
 
@@ -29,6 +30,7 @@ jobs:
           echo 'f6b1d6cf3324cdbd3f9c0b027ec2248143ac8632aa470adef09060ef33a3561d  /tmp/site-bundle.zip' | sha256sum -c -
           mkdir -p site
           unzip -q /tmp/site-bundle.zip -d site
+          cp index.html site/index.html
           test -f site/index.html
       - uses: actions/upload-pages-artifact@v4
         with:
