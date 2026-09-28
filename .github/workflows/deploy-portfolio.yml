@@ -36,6 +36,7 @@ jobs:
           cp projects/index.html site/projects/index.html
           cp assets/case-theme.css site/assets/case-theme.css
           for page in site/projects/*.html; do
+            sed -i 's@../rafaela-product-design-portfolio.html@../index.html@g' "$page"
             if [ "$(basename "$page")" != "index.html" ]; then
               sed -i 's@</head>@<link rel="stylesheet" href="../assets/case-theme.css"></head>@' "$page"
             fi
