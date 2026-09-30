@@ -200,6 +200,14 @@ section.block { padding: 100px 0; }
   :root { scroll-behavior: auto; }
   .btn, .project-image { transition: none; }
 }
+/* Independent scale preserves the portrait’s existing scroll movement. */
+.hero-portrait { transition:scale 220ms ease; }
+@media (hover:hover) and (pointer:fine) {
+  .hero-portrait:hover { scale:1.08; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .hero-portrait { transition:none; }
+}
 </style>
 <link rel="stylesheet" href="assets/typography.css?v=20260928-hero3"></head>
 <body>

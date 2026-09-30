@@ -42,3 +42,5 @@ Piano Carnival card thumbnail now uses the original blog listing image (707x530.
 Removed the duplicate Piano Carnival detail cover. Mish Mish now displays all three source images in their original order, in a single-column gallery with unrestricted image height.
 
 Piano Carnival follow-up: removed the marked artwork from the gallery as well as the top cover. The remaining three source visuals keep their order.
+
+Homepage portrait: subtle 8% enlargement on mouse hover, with reduced-motion transition handling. Existing scroll movement retained.
