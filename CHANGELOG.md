@@ -51,3 +51,8 @@ Buoywatch gallery changed to a single column with larger images at their origina
 - Added the approved product-style error page with existing navigation, Poppins typography, responsive margins, and homepage CTA.
 - Included root 404.html in the GitHub Pages artifact and deployment triggers.
 - Checked nested invalid URLs, refresh, HTTP 404, homepage action, and responsive overflow locally.
+
+## Delayed project hover — October 1, 2026
+- Added approved cursor-following messages to Projects card links and homepage project images.
+- Messages appear after 4 seconds and change after 8 seconds; desktop hover and fine mouse pointer only.
+- Preserved normal card appearance, links, focus, and responsive layout.
