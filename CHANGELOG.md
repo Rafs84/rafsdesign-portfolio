@@ -34,3 +34,5 @@ Project navigation follow-up: Next project follows each Projects tab’s display
 Added Mish Mish to Illustration & Other: original cover and both original gallery images, concise personal-project case study. Navigation order now continues Consulting pitch storyboard → Mish Mish → GIPHY.
 
 Added standalone WeThe15 illustration case study with seven original campaign GIFs. Identified as an unadopted concept. Illustration navigation continues Mish Mish → WeThe15 → GIPHY.
+
+Added Piano Carnival last in UX/UI & Product Design with all four original images in source order, in a single-column gallery. Navigation: SwappyBooks → Piano Carnival → LSAT Demon.
