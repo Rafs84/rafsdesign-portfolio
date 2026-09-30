@@ -28,3 +28,5 @@ Published September 30, 2026. Website release commit: `599626d`. Successful GitH
 Homepage follow-up: removed the GIPHY card from Selected projects. GIPHY remains available in Projects → Illustration & Other and at /giphy/.
 
 Case-study layout follow-up: all project labels now sit above the narrative, matching GIPHY. Removed the sidebar column; text and gallery share the same section alignment.
+
+Project navigation follow-up: Next project follows each Projects tab’s displayed order, wrapping the last card to the first in that tab. Illustration order: GIPHY → Psyche Likee → Consulting pitch storyboard → GIPHY. Product design follows its twelve-card order.
