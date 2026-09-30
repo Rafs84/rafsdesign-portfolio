@@ -68,3 +68,16 @@ h1, h2, h3 { letter-spacing: -.015em; }
 @media (max-width: 600px) {
   .case-hero h1 { font-size: clamp(2.8rem, 12vw, 4rem); }
 }
+
+/* Project labels lead the narrative instead of occupying an empty sidebar. */
+.case-main > .case-layout {
+  display:block;
+  max-width:980px;
+  margin-inline:auto;
+}
+.case-main > .case-layout .case-sidebar {
+  position:static;
+  margin-bottom:28px;
+}
+.case-main > .case-layout .case-section { max-width:none; }
+.case-main > .case-layout .case-section p { max-width:770px; }
