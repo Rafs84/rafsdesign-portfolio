@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'index.html'
+      - '404.html'
       - 'projects/**'
       - 'assets/**'
       - 'giphy/**'
@@ -30,6 +31,7 @@ jobs:
         run: |
           mkdir -p site
           cp index.html site/index.html
+          cp 404.html site/404.html
           cp -R projects assets giphy site/
           test -f site/giphy/index.html
           test -f site/projects/index.html

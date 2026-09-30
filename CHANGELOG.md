@@ -46,3 +46,8 @@ Piano Carnival follow-up: removed the marked artwork from the gallery as well as
 Homepage portrait: subtle 8% enlargement on mouse hover, with reduced-motion transition handling. Existing scroll movement retained.
 
 Buoywatch gallery changed to a single column with larger images at their original proportions. Full-size viewer retained.
+
+## Custom 404 — September 30, 2026
+- Added the approved product-style error page with existing navigation, Poppins typography, responsive margins, and homepage CTA.
+- Included root 404.html in the GitHub Pages artifact and deployment triggers.
+- Checked nested invalid URLs, refresh, HTTP 404, homepage action, and responsive overflow locally.
