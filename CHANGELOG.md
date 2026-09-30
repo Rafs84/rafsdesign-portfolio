@@ -44,3 +44,5 @@ Removed the duplicate Piano Carnival detail cover. Mish Mish now displays all th
 Piano Carnival follow-up: removed the marked artwork from the gallery as well as the top cover. The remaining three source visuals keep their order.
 
 Homepage portrait: subtle 8% enlargement on mouse hover, with reduced-motion transition handling. Existing scroll movement retained.
+
+Buoywatch gallery changed to a single column with larger images at their original proportions. Full-size viewer retained.
