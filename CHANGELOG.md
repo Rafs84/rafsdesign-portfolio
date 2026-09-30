@@ -32,3 +32,5 @@ Case-study layout follow-up: all project labels now sit above the narrative, mat
 Project navigation follow-up: Next project follows each Projects tab’s displayed order, wrapping the last card to the first in that tab. Illustration order: GIPHY → Psyche Likee → Consulting pitch storyboard → GIPHY. Product design follows its twelve-card order.
 
 Added Mish Mish to Illustration & Other: original cover and both original gallery images, concise personal-project case study. Navigation order now continues Consulting pitch storyboard → Mish Mish → GIPHY.
+
+Added standalone WeThe15 illustration case study with seven original campaign GIFs. Identified as an unadopted concept. Illustration navigation continues Mish Mish → WeThe15 → GIPHY.
