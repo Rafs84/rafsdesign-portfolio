@@ -36,3 +36,5 @@ Added Mish Mish to Illustration & Other: original cover and both original galler
 Added standalone WeThe15 illustration case study with seven original campaign GIFs. Identified as an unadopted concept. Illustration navigation continues Mish Mish → WeThe15 → GIPHY.
 
 Added Piano Carnival last in UX/UI & Product Design with all four original images in source order, in a single-column gallery. Navigation: SwappyBooks → Piano Carnival → LSAT Demon.
+
+Piano Carnival card thumbnail now uses the original blog listing image (707x530.png); case-study cover and gallery unchanged.
