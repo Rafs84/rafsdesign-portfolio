@@ -1,0 +1,72 @@
+.giphy-intro { color:#4b4b4b; line-height:1.65; max-width:800px; margin-top:16px; font-size:1.07rem; }
+.giphy-metrics { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:32px; margin:40px 0 0; padding:26px 0 0; border-top:1px solid #d9d9d9; }
+.giphy-metrics div { display:flex; flex-direction:column; }
+.giphy-metrics dt { order:2; font-size:.88rem; color:#4b4b4b; line-height:1.6; margin-top:12px; }
+.giphy-metrics dd { order:1; font-size:clamp(2.4rem,4vw,3.25rem); letter-spacing:-.025em; line-height:1.2; font-weight:600; margin:0; }
+.giphy-selected { margin:0 auto 80px; max-width:980px; }
+.giphy-selected > h2 { font-size:clamp(1.8rem,3vw,2.7rem); font-weight:600; line-height:1.18; margin-bottom:18px; }
+.giphy-section-intro { color:#4b4b4b; font-size:1.07rem; }
+.giphy-draft-note { color:#4b4b4b; font-size:.8rem; margin-top:12px; max-width:700px; }
+.giphy-examples { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:36px 24px; list-style:none; padding:0; margin:32px 0 0; }
+.giphy-examples li { border:1px solid #d9d9d9; border-radius:8px; padding:24px; min-width:0; }
+.giphy-asset { min-height:200px; display:flex; flex-direction:column; align-items:center; justify-content:center; background:#fafafa; margin-bottom:24px; }
+.giphy-asset-number { font-size:2.5rem; font-weight:600; letter-spacing:-.02em; }
+.giphy-placeholder,.giphy-draft { font-size:.75rem; color:#4b4b4b; }
+.giphy-examples h3 { font-size:1.38rem; font-weight:600; line-height:1.3; }
+.giphy-examples dl { font-size:.9rem; line-height:1.65; margin:16px 0 0; }
+.giphy-examples dt { font-weight:600; margin:12px 0 2px; }
+.giphy-examples dd { margin:0; color:#4b4b4b; }
+.giphy-commercial .case-section:last-child { margin-bottom:40px; }
+@media(max-width:600px) { .giphy-metrics { gap:24px; grid-template-columns:1fr; } .giphy-metrics div { display:grid; grid-template-columns:115px 1fr; align-items:center; gap:16px; } .giphy-metrics dt { margin-top:0; } .giphy-examples { grid-template-columns:1fr; } .giphy-selected { margin-bottom:48px; } }
+.giphy-period { font-size:.75rem; color:#4b4b4b; margin-top:16px; }
+.giphy-cover img { max-height:none; width:100%; }
+.giphy-asset { position:relative; padding:20px; min-height:280px; background:#fff; }
+.giphy-asset img { width:100%; height:220px; object-fit:contain; }
+.giphy-example-heading { display:flex; align-items:baseline; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+.giphy-example-heading span { font-size:.78rem; color:#4b4b4b; }
+.giphy-source { display:inline-block; margin-top:20px; font-size:.78rem; font-weight:600; text-decoration:none; }
+
+.giphy-cover { scroll-margin-top:110px; }
+.giphy-cover img { height:auto; aspect-ratio:4/3; }
+
+#selected-title { scroll-margin-top:110px; }
+.giphy-campaign { margin-top:40px; padding-top:32px; border-top:1px solid #d9d9d9; }
+.giphy-campaign-label { font-size:.75rem; color:#4b4b4b; }
+.giphy-campaign h3 { font-size:1.7rem; margin:12px 0 24px; }
+.giphy-campaign-images { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:24px; }
+.giphy-campaign-images > div { display:flex; align-items:center; justify-content:center; border-radius:6px; overflow:hidden; background:#eee5ff; }
+.giphy-campaign-images .giphy-campaign-wordmark { background:#49216b; }
+.giphy-campaign-images img { width:100%; height:auto; aspect-ratio:1; object-fit:contain; padding:20px; box-sizing:border-box; }
+@media(max-width:400px) { .giphy-campaign-images { gap:8px; } .giphy-campaign-images img { padding:10px; } }
+
+#wethe15 { scroll-margin-top:110px; }
+.giphy-campaign-images { margin-top:24px; grid-template-columns:repeat(3,minmax(0,1fr)); }
+.giphy-campaign-images img { padding:0; }
+@media(max-width:600px) { .giphy-campaign-images { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+
+/* Keep the brand example and closing copy on the selected-work column. */
+.giphy-commercial { display:block; max-width:980px; margin-inline:auto; }
+.giphy-commercial > div[aria-hidden] { display:none; }
+.giphy-commercial .case-section { max-width:none; }
+.giphy-commercial .case-section > p,
+.giphy-campaign > p { max-width:770px; }
+.giphy-campaign h3 { margin-top:0; }
+
+/* The introduction follows the same column as the selected stickers. */
+.case-main > .case-layout:not(.giphy-commercial) {
+  display:block;
+  max-width:980px;
+  margin-inline:auto;
+}
+.case-main > .case-layout:not(.giphy-commercial) .case-sidebar {
+  position:static;
+  margin-bottom:28px;
+}
+.case-main > .case-layout:not(.giphy-commercial) .case-section {
+  max-width:none;
+}
+.case-main > .case-layout:not(.giphy-commercial) .case-section p {
+  max-width:770px;
+}
+
+#giphy-introduction { scroll-margin-top:110px; }

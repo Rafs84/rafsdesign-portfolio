@@ -4,13 +4,10 @@ on:
   push:
     branches: [main]
     paths:
-      - 'site-parts/**'
       - 'index.html'
-      - 'projects/index.html'
-      - 'assets/case-theme.css'
-      - 'assets/rafs-logo.svg'
-      - 'assets/raf-portrait.png'
-      - 'assets/typography.css'
+      - 'projects/**'
+      - 'assets/**'
+      - 'giphy/**'
       - '.github/workflows/deploy-portfolio.yml'
   workflow_dispatch:
 
@@ -31,27 +28,11 @@ jobs:
       - uses: actions/configure-pages@v5
       - name: Assemble site
         run: |
-          cat site-parts/site-bundle.part-* > /tmp/site-bundle.zip
-          echo 'f6b1d6cf3324cdbd3f9c0b027ec2248143ac8632aa470adef09060ef33a3561d  /tmp/site-bundle.zip' | sha256sum -c -
           mkdir -p site
-          unzip -q /tmp/site-bundle.zip -d site
           cp index.html site/index.html
-          cp projects/index.html site/projects/index.html
-          cp assets/case-theme.css site/assets/case-theme.css
-          cp assets/rafs-logo.svg site/assets/rafs-logo.svg
-          cp assets/raf-portrait.png site/assets/raf-portrait.png
-          cp assets/typography.css site/assets/typography.css
-          sed -i 's@>RAFS</a>@><img src="assets/rafs-logo.svg" alt="" width="74" height="23"></a>@' site/index.html
-          sed -i 's@</head>@<link rel="stylesheet" href="assets/typography.css"></head>@' site/index.html
-          for page in site/projects/*.html; do
-            sed -i 's@../rafaela-product-design-portfolio.html@../index.html@g' "$page"
-            sed -i 's@>RAFS</a>@><img src="../assets/rafs-logo.svg" alt="" width="74" height="23"></a>@' "$page"
-            if [ "$(basename "$page")" != "index.html" ]; then
-              sed -i 's@</head>@<link rel="stylesheet" href="../assets/case-theme.css"></head>@' "$page"
-            fi
-            sed -i 's@</head>@<link rel="stylesheet" href="../assets/typography.css"></head>@' "$page"
-          done
-          test -f site/index.html
+          cp -R projects assets giphy site/
+          test -f site/giphy/index.html
+          test -f site/projects/index.html
       - uses: actions/upload-pages-artifact@v4
         with:
           path: site
