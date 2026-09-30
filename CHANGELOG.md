@@ -21,3 +21,6 @@ Checked tab switching, gallery columns and full-size viewer, ordered imported im
 
 ## Future updates
 Use this repository as the website source. Keep source-images.json and GIPHY selection.json manifests with assets. Refresh dated metrics deliberately. Local preview: node preview.cjs (local workspace only). Do not publish screenshot previews or synced ChatGPT reference files.
+
+## Completed deployment
+Published September 30, 2026. Website release commit: `599626d`. Successful GitHub Pages run: https://github.com/Rafs84/rafsdesign-portfolio/actions/runs/36745471151. Live GIPHY page and project tab markup verified on https://rafsdesign.com.
