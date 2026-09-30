@@ -24,3 +24,5 @@ Use this repository as the website source. Keep source-images.json and GIPHY sel
 
 ## Completed deployment
 Published September 30, 2026. Website release commit: `599626d`. Successful GitHub Pages run: https://github.com/Rafs84/rafsdesign-portfolio/actions/runs/36745471151. Live GIPHY page and project tab markup verified on https://rafsdesign.com.
+
+Homepage follow-up: removed the GIPHY card from Selected projects. GIPHY remains available in Projects → Illustration & Other and at /giphy/.
