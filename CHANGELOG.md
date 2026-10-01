@@ -68,3 +68,6 @@ Added active section/page indicators, shortened About navigation label, compact 
 
 ## Inline contact confirmation — October 1, 2026
 Added custom reCAPTCHA v2 checkbox, asynchronous submission, Sending… and confirmed Message sent feedback, cleared submitted fields, and Send another message. Errors retain drafts. Only the public site key is shipped; private verification key remains in Formspree.
+
+## Shared favicon — October 1, 2026
+All 22 pages now reference assets/favicon.svg, preserving the original homepage R icon.
