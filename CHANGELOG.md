@@ -62,3 +62,6 @@ Added /contact/ with native name, email, and message fields using existing portf
 
 ## GIPHY cleanup — October 1, 2026
 Removed the duplicated WeThe15 campaign section from the GIPHY page. The standalone WeThe15 case study, illustration project listing, and next-project navigation remain intact.
+
+## Navigation — October 1, 2026
+Added active section/page indicators, shortened About navigation label, compact mobile Menu disclosure with visible contact CTA, and sticky-header clearance for homepage section links. Shared navigation assets used across all 22 page headers.
