@@ -59,3 +59,6 @@ Buoywatch gallery changed to a single column with larger images at their origina
 
 ## Contact page — October 1, 2026
 Added /contact/ with native name, email, and message fields using existing portfolio styles. Contact links now open this page. Native POST submits to Formspree with privately configured recipient, Formshield, and hosted reCAPTCHA enabled. No recipient email or secret is included in public code. Tally is not used. End-to-end inbox receipt still requires user verification.
+
+## GIPHY cleanup — October 1, 2026
+Removed the duplicated WeThe15 campaign section from the GIPHY page. The standalone WeThe15 case study, illustration project listing, and next-project navigation remain intact.
