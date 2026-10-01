@@ -56,3 +56,6 @@ Buoywatch gallery changed to a single column with larger images at their origina
 - Added approved cursor-following messages to Projects card links and homepage project images.
 - Messages appear after 4 seconds and change after 8 seconds; desktop hover and fine mouse pointer only.
 - Preserved normal card appearance, links, focus, and responsive layout.
+
+## Contact page — October 1, 2026
+Added /contact/ with native name, email, and message fields using existing portfolio styles. Contact links now open this page. Native POST submits to Formspree with privately configured recipient, Formshield, and hosted reCAPTCHA enabled. No recipient email or secret is included in public code. Tally is not used. End-to-end inbox receipt still requires user verification.
