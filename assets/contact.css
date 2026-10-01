@@ -14,3 +14,7 @@
 .contact-form button:disabled { opacity:.55; cursor:not-allowed; transform:none; }
 .contact-status { font-size:.78rem; color:var(--color-text-secondary); margin-top:20px; }
 @media(max-width:520px) { .contact-form .btn { width:100%; } }
+.contact-captcha:empty { display:none; }
+.contact-captcha { margin-bottom:24px; }
+.contact-again { padding:0; margin-top:16px; border:0; background:none; color:var(--color-dark); font:inherit; font-size:.85rem; text-decoration:underline; text-underline-offset:4px; }
+.contact-again[hidden] { display:none; }

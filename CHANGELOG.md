@@ -65,3 +65,6 @@ Removed the duplicated WeThe15 campaign section from the GIPHY page. The standal
 
 ## Navigation — October 1, 2026
 Added active section/page indicators, shortened About navigation label, compact mobile Menu disclosure with visible contact CTA, and sticky-header clearance for homepage section links. Shared navigation assets used across all 22 page headers.
+
+## Inline contact confirmation — October 1, 2026
+Added custom reCAPTCHA v2 checkbox, asynchronous submission, Sending… and confirmed Message sent feedback, cleared submitted fields, and Send another message. Errors retain drafts. Only the public site key is shipped; private verification key remains in Formspree.
