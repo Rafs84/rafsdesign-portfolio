@@ -6,6 +6,8 @@ on:
     paths:
       - 'index.html'
       - '404.html'
+      - 'sitemap.xml'
+      - 'robots.txt'
       - 'projects/**'
       - 'assets/**'
       - 'giphy/**'
@@ -33,6 +35,7 @@ jobs:
           mkdir -p site
           cp index.html site/index.html
           cp 404.html site/404.html
+          cp sitemap.xml robots.txt site/
           cp -R projects assets giphy contact site/
           test -f site/giphy/index.html
           test -f site/projects/index.html
